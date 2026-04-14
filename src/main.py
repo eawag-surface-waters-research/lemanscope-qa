@@ -17,8 +17,6 @@ def main(params):
             raise ValueError("aws_id, aws_key and bucket must be provided for upload.")
 
 if __name__ == "__main__":
-    if sys.version_info[0:2] != (3, 9):
-        raise Exception('Requires python 3.9')
     parser = argparse.ArgumentParser()
     parser.add_argument('--upload', '-u', help='Upload', action='store_true')
     parser.add_argument('--bucket', '-b', help="Bucket", type=str, default=False)
